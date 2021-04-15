@@ -8,8 +8,9 @@ namespace tris_cs_console
             client c = new client();
             Console.WriteLine("gioco tris client:");
             bool acceptGame = false;
+            string error;
             for (int i = 0; i < 3; i++){
-                acceptGame = c.connect();
+                (acceptGame, error) = c.connect();
                 if (acceptGame == true){
                     break;
                 }
@@ -17,7 +18,7 @@ namespace tris_cs_console
             if (acceptGame == true){
 
             }else{
-                Console.WriteLine("errore alla connessione al server, riprova piú tari o idk, vedi tu ");
+                Console.WriteLine("errore alla connessione al server, riprova piú tardi o idk, vedi tu ");
             }
         }
     }

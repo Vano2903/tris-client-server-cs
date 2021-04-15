@@ -15,7 +15,8 @@ namespace tris_cs_console
         //metodi privati
 
         //metodi pubblici
-        public Tuple connect()
+        
+        public (bool, string) connect()
         {
             try
             {
@@ -33,25 +34,25 @@ namespace tris_cs_console
                 catch (ArgumentNullException ane)
                 {
                     Console.WriteLine("ArgumentNullException : {0}", ane.ToString());
-                    return new Tuple(false, "error");
+                    return (false, "error");
                 }
                 catch (SocketException se)
                 {
                     Console.WriteLine("SocketException : {0}", se.ToString());
-                    return new Tuple(false, "error");
+                    return (false, "error");
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine("Unexpected exception : {0}", e.ToString());
-                    return new Tuple(false, "error");
+                    return (false, "error");
                 }
                 this.sender = sender;
-                return new Tuple(true, "nil");
+                return (true, "nil");
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
-                return false;
+                return (false, "error");
             }
         }
     }
