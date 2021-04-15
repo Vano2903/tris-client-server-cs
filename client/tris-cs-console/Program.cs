@@ -20,6 +20,8 @@ namespace tris_cs_console
             }else{
                 Console.WriteLine("errore alla connessione al server, riprova piú tardi o idk, vedi tu ");
             }
+            Console.WriteLine("premi 1 per creare la partita, 2 per ... beh ci sto ancora pensando");
+
         }
     }
 }

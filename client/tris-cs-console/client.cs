@@ -55,5 +55,10 @@ namespace tris_cs_console
                 return (false, "error");
             }
         }
+    
+        public (int, string) genGame(string)
+        {
+
+        }
     }
 }
